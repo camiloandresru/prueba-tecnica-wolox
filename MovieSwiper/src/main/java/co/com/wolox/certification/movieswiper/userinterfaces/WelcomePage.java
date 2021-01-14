@@ -6,8 +6,9 @@ import org.openqa.selenium.By;
 public class WelcomePage {
 
     public static final Target LOGIN_OPTION = Target.the("Log in option").located(
-            By.id("com.azhavrid.movieswiperr:id/8a0ac398-2065-43de-aa63-988fb6464d6f"));
+            By.id("com.azhavrid.movieswiperr:id/logIn"));
 
-    public static final Target CONTINUE_AS_GUEST = Target.the("Continue as guest").located(
-            By.id("com.azhavrid.movieswiperr:id/965b8f04-d542-4bda-9019-0ac0541d4697"));
+    public static final Target CONTINUE_AS_GUEST = Target.the("Continue as guest").locatedBy(
+            "\t\n" +
+                    "//android.view.ViewGroup[@content-desc=\"continueAsGuest\"]/android.widget.TextView");
 }

@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features/add_favorite.feature",
-        glue = "package co.com.wolox.certification.movieswiper.stepdefinitions",
+        glue = "co.com.wolox.certification.movieswiper.stepdefinitions",
         snippets = SnippetType.CAMELCASE,
-        tags = "@RegisteredUser"
+        tags = "@FavoriteMovieFromBrowse"
 )
 
 public class AddFavorite {

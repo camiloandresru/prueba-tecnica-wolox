@@ -6,11 +6,11 @@ import org.openqa.selenium.By;
 public class LoginPage {
 
     public static final Target USERNAME = Target.the("Username field").located(
-            By.id("com.azhavrid.movieswiperr:id/891e35c2-6603-4880-9c3e-76d8cc35f776"));
+            By.id("com.azhavrid.movieswiperr:id/userInput"));
 
     public static final Target PASSWORD = Target.the("password field").located(
-            By.id("com.azhavrid.movieswiperr:id/"));
+            By.id("com.azhavrid.movieswiperr:id/passwordInput"));
 
     public static final Target LOGIN_BUTTON = Target.the("Login button").located(
-            By.id("com.azhavrid.movieswiperr:id/"));
+            By.id("com.azhavrid.movieswiperr:id/logInButton"));
 }
