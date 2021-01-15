@@ -2,12 +2,15 @@ package co.com.wolox.certification.movieswiper.tasks;
 
 import co.com.wolox.certification.movieswiper.userinterfaces.LoginPage;
 import co.com.wolox.certification.movieswiper.userinterfaces.WelcomePage;
+import io.appium.java_client.AppiumDriver;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getProxiedDriver;
 
 public class Login implements Task {
 

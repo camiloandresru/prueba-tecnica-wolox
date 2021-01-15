@@ -5,12 +5,12 @@ import org.openqa.selenium.By;
 
 public class LoginPage {
 
-    public static final Target USERNAME = Target.the("Username field").located(
-            By.id("com.azhavrid.movieswiperr:id/userInput"));
+    public static final Target USERNAME = Target.the("Username field").locatedBy(
+            "//android.widget.EditText[@content-desc=\"userInput\"]");
 
-    public static final Target PASSWORD = Target.the("password field").located(
-            By.id("com.azhavrid.movieswiperr:id/passwordInput"));
+    public static final Target PASSWORD = Target.the("password field").locatedBy(
+            "//android.widget.EditText[@content-desc=\"passwordInput\"]");
 
-    public static final Target LOGIN_BUTTON = Target.the("Login button").located(
-            By.id("com.azhavrid.movieswiperr:id/logInButton"));
+    public static final Target LOGIN_BUTTON = Target.the("Login button").locatedBy(
+            "//android.view.ViewGroup[@content-desc=\"logInButton\"]");
 }

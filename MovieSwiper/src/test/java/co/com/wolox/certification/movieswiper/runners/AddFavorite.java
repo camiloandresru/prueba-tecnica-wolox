@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/add_favorite.feature",
         glue = "co.com.wolox.certification.movieswiper.stepdefinitions",
         snippets = SnippetType.CAMELCASE,
-        tags = "@FavoriteMovieFromBrowse"
+        tags = "@FavoriteMovieFromExplore"
 )
 
 public class AddFavorite {
