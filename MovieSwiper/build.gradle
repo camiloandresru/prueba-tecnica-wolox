@@ -32,6 +32,7 @@ dependencies {
     implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
     implementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
     implementation "net.serenity-bdd:serenity-screenplay-rest:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-ensure:$rootProject.ext.serenityVersion"
     implementation group: 'org.json', name: 'json', version: '20190722'
 
     testImplementation 'junit:junit:4.12'

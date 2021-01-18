@@ -11,12 +11,12 @@ import net.serenitybdd.screenplay.ensure.Ensure;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class AddAFavoriteMovie implements Task {
+public class TryToAddFavoriteMovie implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        int flag = CommonFunctions.generateFlag(5);
+        int flag = CommonFunctions.generateFlag(4);
 
         for (int i =1; i<= flag; i++){
             actor.attemptsTo(
@@ -25,14 +25,13 @@ public class AddAFavoriteMovie implements Task {
         }
         actor.attemptsTo(
                 Click.on(BrowsePage.CHOSE_MOVIE),
-                Ensure.that(BrowsePage.FAVORITE_BUTTON_UNSELECTED).isDisplayed(),
-                Click.on(BrowsePage.FAVORITE_BUTTON_UNSELECTED),
-                Click.on(LibraryPage.LIBRARY_OPTION),
-                Click.on(LibraryPage.MY_FAVORITE_BUTTON)
+                Ensure.that(BrowsePage.FAVORITE_BUTTON_UNSELECTED).isNotDisplayed(),
+                Click.on(LibraryPage.LIBRARY_OPTION)
         );
+
     }
 
-    public static AddAFavoriteMovie fromBrowsePage(){
-        return instrumented(AddAFavoriteMovie.class);
+    public static TryToAddFavoriteMovie fromBrowsePage(){
+        return instrumented(TryToAddFavoriteMovie.class);
     }
 }
