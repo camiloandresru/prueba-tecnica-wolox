@@ -58,6 +58,11 @@ public class AddFavoriteStepDefinition {
         theActorInTheSpotlight().attemptsTo(SwipeUpAMovie.fromExplorePage());
     }
 
+    @When("^he adds a remastered (.*) as favorite$")
+    public void heAddsARemasteredMovieAsFavorite(String movie) {
+        theActorInTheSpotlight().attemptsTo(AddRemastering.of(movie));
+    }
+
     @When("^the guest try to adds a movie as favorite$")
     public void theGuestTryToAddsAMovieAsFavorite() {
         theActorCalled("guest").attemptsTo(
