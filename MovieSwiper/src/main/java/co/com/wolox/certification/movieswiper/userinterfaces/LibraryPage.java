@@ -21,4 +21,7 @@ public class LibraryPage {
 
     public static final Target AUTHENTICATED_MESSAGE = Target.the("Authenticated users message").located(
             By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView[2]"));
+
+    public static final Target FAVORITE_DELETE = Target.the("Movie to delete").located(
+            By.xpath("(//android.view.ViewGroup[@content-desc])[1]"));
 }

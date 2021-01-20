@@ -43,8 +43,8 @@ public class AddFavoriteStepDefinition {
         theActorCalled(username).wasAbleTo(Login.withHis(username));
     }
 
-    @When("^he adds a movie as favorite from browse page$")
-    public void heAddsAMovieAsFavoriteFromBrowsePage() {
+    @When("^he adds a movie as favorite from the browse page$")
+    public void heAddsAMovieAsFavoriteFromTheBrowsePage() {
         theActorInTheSpotlight().attemptsTo(AddAFavoriteMovie.fromBrowsePage());
     }
 
@@ -53,8 +53,8 @@ public class AddFavoriteStepDefinition {
         theActorInTheSpotlight().should(seeThat(WasAdded.inTheLibrary(), is(true)).orComplainWith(AddFavoriteException.class, VERIFY_ADD_MOVIE_EXCEPTION));
     }
 
-    @When("^he adds a movie as favorite from explore page$")
-    public void heAddsAMovieAsFavoriteFromExplorePage() {
+    @When("^he adds a movie as favorite from the explore page$")
+    public void heAddsAMovieAsFavoriteFromTheExplorePage() {
         theActorInTheSpotlight().attemptsTo(SwipeUpAMovie.fromExplorePage());
     }
 

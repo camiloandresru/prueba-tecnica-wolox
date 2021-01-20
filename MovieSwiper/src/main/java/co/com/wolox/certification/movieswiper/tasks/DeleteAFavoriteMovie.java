@@ -7,17 +7,20 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.ensure.Ensure;
+import net.thucydides.core.annotations.Step;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class DeleteAFavoriteMovie implements Task {
 
     @Override
+    @Step("{0} deletes a favorite movie from his library")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Swipe.fromPoint(0.010,0.015).toPoint(0.030, 0.015),
+                Swipe.left().intoElement(LibraryPage.FAVORITE_DELETE),
                 Click.on(BrowsePage.FAVORITE_BUTTON_SELECTED),
                 Click.on(LibraryPage.LIBRARY_OPTION),
+                Click.on(LibraryPage.MY_FAVORITE_BUTTON),
                 Ensure.that(LibraryPage.NO_MOVIES_MESSAGE).isDisplayed()
         );
     }

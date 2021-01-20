@@ -1,20 +1,20 @@
 @cucumber
 Feature: Add favorite movies
   As a fan of the movies
-  I want to add my favorite movies in the library
+  I want to add my favorites movies in the library
 
-  @AddFromBrowse
-  Scenario: User adds a movie in the favorite library from Browse Page
+  @AddFavoriteFromBrowse
+  Scenario: User adds a movie in the favorite library from the Browse Page
   Narrative: The user is registered in Movie Swiper
     Given that test_wolox is logged into the app
-    When he adds a movie as favorite from browse page
+    When he adds a movie as favorite from the browse page
     Then he should see the movies in his library My Favorite
 
-  @AddFromExplore
-  Scenario: User adds a movie in the favorite library from Explore Page
+  @AddFavoriteFromExplore
+  Scenario: User adds a movie in the favorite library from the Explore Page
   Narrative: The user is registered in Movie Swiper
     Given that test_wolox is logged into the app
-    When he adds a movie as favorite from explore page
+    When he adds a movie as favorite from the explore page
     Then he should see the movies in his library My Favorite
 
   @AddRemastered

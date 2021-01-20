@@ -8,12 +8,14 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.ensure.Ensure;
+import net.thucydides.core.annotations.Step;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class AddAFavoriteMovie implements Task {
 
     @Override
+    @Step("{0} adds a favorite movie from the Trending Daily")
     public <T extends Actor> void performAs(T actor) {
 
         int flag = CommonFunctions.generateFlag(5);
