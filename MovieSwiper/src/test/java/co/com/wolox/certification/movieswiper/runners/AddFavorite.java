@@ -9,8 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/add_favorite.feature",
         glue = "co.com.wolox.certification.movieswiper.stepdefinitions",
-        snippets = SnippetType.CAMELCASE,
-        tags = "@AddFavoriteFromExplore"
+        snippets = SnippetType.CAMELCASE
 )
 
 public class AddFavorite {
