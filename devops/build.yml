@@ -4,8 +4,8 @@ steps:
     inputs:
       SonarCloud: SonarCloud
       organization: camiloandresru
-      projectKey: movie-swiper
-      projectName: MovieSwiper
+      projectKey: 'movie-swiper'
+      projectName: 'MovieSwiper'
       extraProperties: |
       sonar.sources= $(Build.SourcesDirectory)/MovieSwiper/src/main/java
       sonar.test = $(Build.SourcesDirectory)/MovieSwiper/src/test/java
