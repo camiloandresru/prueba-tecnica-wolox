@@ -1,0 +1,34 @@
+steps:
+  - task: SonarCloudPrepare@1
+    displayName: 'Prepare analysis on SonarCloud'
+    inputs:
+      SonarCloud: SonarCloud
+      organization: camiloandresru
+      projectKey: movie-swiper
+      projectName: MovieSwiper
+      extraProperties: |
+      sonar.sources= $(Build.SourcesDirectory)/MovieSwiper/src/main/java
+      sonar.test = $(Build.SourcesDirectory)/MovieSwiper/src/test/java
+      sonar.java.binaries= $(Build.SourcesDirectory)/MovieSwiper/build/classes
+      sonar.java.libraries= $(Build.SourcesDirectory)/MovieSwiper/build/libs
+
+  - task: Gradle@2
+    displayName: 'Gradlew build'
+    inputs:
+      gradleWrapperFile: $(Build.SourcesDirectory)/MovieSwiper/gradlew
+      workingDirectory: $(Build.SourcesDirectory)/MovieSwiper
+      tasks: 'clean build -x test'
+      publishJUnitResults: false
+      jdkVersionOption: 1.8
+  
+  - task: SonarCloudAnalyze@1
+    displayName: 'Run Code Analysis'
+
+  - task: SonarCloudPublish@1
+  displayName: 'Publish Quality Gate Result'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact'
+    inputs:
+      PathtoPublish: $(Build.StagingDirectory)
+      ArtifactName: 'MovieSwiper_Artifact'

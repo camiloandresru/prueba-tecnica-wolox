@@ -1,0 +1,27 @@
+name: $(Build.SourceBranchName).$(date:yyyyMMdd)$(rev:.r)
+
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - MovieSwiper
+
+resources:
+  - repo: self
+    clean: all
+    fetchDepth: 1
+
+stages:
+  - stage: Build 
+    displayName: Build and publish artifact
+    jobs:
+      - job: Build
+        displayName: Pipeline CI
+        pool:
+          vmImage: 'ubuntu-latest'
+          demands: 
+            - java
+        steps:
+          - template: devops/build.yml
