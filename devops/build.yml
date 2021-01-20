@@ -6,13 +6,13 @@ steps:
       organization: 'camiloandresru'
       scannerMode: 'CLI'
       extraProperties: |
-          sonar.organization= camiloandresru
-          sonar.projectKey= movie-swiper
-          sonar.projectName= MovieSwiper
-          sonar.sources= $(Build.SourcesDirectory)/MovieSwiper/src/main/java
-          sonar.test = $(Build.SourcesDirectory)/MovieSwiper/src/test/java
-          sonar.java.binaries= $(Build.SourcesDirectory)/MovieSwiper/build/classes
-          sonar.java.libraries= $(Build.SourcesDirectory)/MovieSwiper/build/libs
+          sonar.organization=camiloandresru
+          sonar.projectKey=movie-swiper
+          sonar.projectName=MovieSwiper
+          sonar.sources=$(Build.SourcesDirectory)/MovieSwiper/src/main/java
+          sonar.test=$(Build.SourcesDirectory)/MovieSwiper/src/test/java
+          sonar.java.binaries=$(Build.SourcesDirectory)/MovieSwiper/build/classes
+          sonar.java.libraries=$(Build.SourcesDirectory)/MovieSwiper/build/libs
 
   - task: Gradle@2
     displayName: 'Gradlew build'
