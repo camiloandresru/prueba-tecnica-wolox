@@ -27,7 +27,7 @@ steps:
     displayName: 'Run Code Analysis'
 
   - task: SonarCloudPublish@1
-  displayName: 'Publish Quality Gate Result'
+    displayName: 'Publish Quality Gate Result'
 
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact'
