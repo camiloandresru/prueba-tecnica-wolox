@@ -3,3 +3,6 @@
 * Se recomienda que a la hora de listarse los resultados busquedad mediante la barra de busqueda de Browse Page, estos se orden descendentes por año de estreno de la película o con mejores criterios de coincidencia. Aunque en la automatización se realiza la busqueda de manera dinámica, esta es lenta siento el escenario automatizado más lento en la ejecución.
 * Se recomienda manejar un estándar de uniformidad en la representación del carácter espacio en las propiedades de los elementos. Por ejemplo el xpath `(//android.view.ViewGroup[@content-desc="The_Lion King"])[1]` presenta doble interpretación, siendo ' ' y '_' representación del mismo complicando el manejo de estás propiedades a nivel de automatizaciones.
 * A nivel de lógica de negocio se recomienda que los guest user no tengan la necesidad de hacer logout en caso de querer hacer login en una nueva sesión de la aplicación, haciendo que la experiencia de usuario presente dicha brecha.
+
+## Observaciones
+En caso de que se desee emplear la automatización realizada en dispositivos iOS, se recomienda utilizar la implementación de la interfaz `LocatesCrossPlatform` de la clase `targets` de Screenplay, mapenado así los IDs para Android y iOS respectivamente.
